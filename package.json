@@ -23,6 +23,7 @@
     "test": "grunt validate --verbose",
     "setup": "yarn install && knex-migrator init && grunt symlink && grunt init || true",
     "lint": "grunt lint"
+    "test-mochaawesome": "nyc --reporter=html mocha core/test/unit/*.js --reporter mochawesome --exit"
   },
   "engines": {
     "node": "^6.9.0 || ^8.9.0",
